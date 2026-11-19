@@ -1,0 +1,17 @@
+.hero-deco-item { background: rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: center; height: 120px; transition: transform 0.3s ease; }
+
+.hero-deco-item:hover { transform: translateY(-5px); }
+
+.hero-deco-item:nth-child(1) { background: linear-gradient(135deg, #f0e6d2, #d4c4a8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+
+.hero-deco-item:nth-child(2) { background: linear-gradient(135deg, #a8d8f0, #6ba8d8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+
+.hero-deco-item:nth-child(3) { background: linear-gradient(135deg, #f0e6d2, #e6c8a8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+
+.hero-deco-item:nth-child(1)::before { content: "UI Cards"; font-weight: bold; font-size: 1rem; color: #888; }
+
+.hero-deco-item:nth-child(2)::before { content: "Website Preview"; font-weight: bold; font-size: 1rem; color: #888; }
+
+.hero-deco-item:nth-child(3) { background: linear-gradient(135deg, #d4c4a8, #a8d8f0); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; }
+
+.hero-deco-item:nth-child(3)::before { content: "Grid Modern"; font-weight: bold; font-size: 1rem; color: #888; }
