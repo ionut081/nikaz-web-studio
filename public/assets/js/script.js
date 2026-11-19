@@ -25,6 +25,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 const modal = document.getElementById('contact-modal');
 const contactBtn = document.getElementById('open-contact-modal');
 const closeBtn = document.querySelector('.close-modal');
+const contactForm = document.getElementById('contact-form');
+const contactSubject = document.getElementById('contact-subject');
+
+if (contactForm && contactSubject) {
+    contactForm.addEventListener('submit', () => {
+        const name = contactForm.elements.namedItem('name').value.trim();
+        contactSubject.value = name
+            ? `Mesaj nou de la ${name} — Nikaz Web Studio`
+            : 'Mesaj nou — Nikaz Web Studio';
+    });
+}
 
 if (contactBtn && modal) {
     contactBtn.addEventListener('click', (e) => {
