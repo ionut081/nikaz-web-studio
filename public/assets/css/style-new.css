@@ -47,8 +47,13 @@ body {
     }
 }
 
-/* Stare initiala ascunsa pentru animatii la scroll */
-.portfolio-grid, .project-card {
+/* Stare initiala ascunsa DOAR pentru cardurile din portofoliu */
+.portfolio-grid {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.portfolio-grid .project-card {
     opacity: 0;
     transform: translateY(40px);
 }
