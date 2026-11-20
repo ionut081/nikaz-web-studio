@@ -25,6 +25,76 @@ body {
 /* Animations */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated {
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+}
+
+.hero-content, .portfolio-grid {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: staggerFadeIn 0.6s ease-out forwards;
+    animation-delay: calc(var(--delay, 0) * 0.1s);
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.laptop, .phone {
+    transform-style: preserve-3d;
+    animation: float 6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
 /* Header */
 .site-header {
     position: absolute;
@@ -81,7 +151,9 @@ body {
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary { background: var(--accent-blue); color: white; box-shadow: 0 12px 35px rgba(0,119,255,.25); }
@@ -89,7 +161,16 @@ body {
 .btn:hover { transform: translateY(-3px); border-color:var(--accent-blue); }
 
 /* Hero mockup */
-.hero-visual { height: 580px; position: relative; display: flex; align-items: center; justify-content: center; perspective: 1200px; gap: 2rem; }
+.hero-visual {
+    height: 580px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    gap: 2rem;
+    overflow: hidden;
+}
 .visual-glow { position:absolute; width:540px; height:440px; border-radius:50%; background:rgba(0,119,255,.11); filter:blur(80px); z-index: 1; }
 .laptop { position:absolute; width:680px; height:430px; transform:translate(-22px,-10px) rotateY(-7deg) rotateX(2deg); z-index:2; left: 0; }
 .laptop-camera { position:absolute; width:5px; height:5px; border-radius:50%; background:#5f6472; top:-9px; left:50%; z-index:4; }
