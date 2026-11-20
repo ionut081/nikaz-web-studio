@@ -47,22 +47,17 @@ body {
     }
 }
 
-/* Portofoliul este vizibil implicit pentru ca secțiunea să nu dispară */
-.portfolio-grid {
+/* Cardurile din portofoliu - vizibile implicit */
+.portfolio-grid .project-card {
     opacity: 1;
     transform: translateY(0);
+    transition: all 0.6s ease-out;
 }
 
-/* Cardurile din portofoliu - ascunse initial, animate la scroll */
-.portfolio-grid .project-card {
+/* Animație subtile aplicată de JS la scroll */
+.portfolio-grid .project-card.scroll-animate {
     opacity: 0;
     transform: translateY(40px);
-}
-
-/* Clase aplicate de JS cand cardurile ajung in vizibilitate */
-.portfolio-grid .project-card.animated {
-    opacity: 1;
-    transform: translateY(0);
     animation: staggerFadeIn 0.6s ease-out forwards;
     animation-delay: calc(var(--delay, 0) * 0.1s);
 }
