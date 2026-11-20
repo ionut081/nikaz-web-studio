@@ -26,7 +26,7 @@ document.querySelectorAll('.hero-content, .portfolio-grid').forEach(element => {
 });
 
 // Adaugam delay pentru carduri
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.project-card');
 cards.forEach((card, index) => {
     card.style.setProperty('--delay', index.toString());
     observer.observe(card);
