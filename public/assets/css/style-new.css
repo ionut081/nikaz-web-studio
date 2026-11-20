@@ -342,20 +342,15 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     .logo { font-size:.82rem; }.logo-mark{width:34px;height:34px}
     .menu-toggle { display:flex; width:42px;height:42px;border:1px solid var(--border-color);border-radius:50%;background:transparent;align-items:center;justify-content:center;flex-direction:column;gap:5px;}
     .menu-toggle span{width:15px;height:1px;background:white}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;padding:1.2rem;background:rgba(10,10,12,.96);border:1px solid var(--border-color);border-radius:12px;flex-direction:column;gap:1rem}.nav.active .nav-links{display:flex}
-    .hero { height:auto;max-height:none;min-height:0;grid-template-columns:1fr;padding:100px 1.5rem 0;text-align:center; }
-    .hero-content{align-self:start}.eyebrow{font-size:.64rem}.hero h1{font-size:3rem;letter-spacing:-2px;margin-bottom:1.2rem}.hero-copy{font-size:.92rem;margin:0 auto 1.5rem}.hero .cta-buttons{justify-content:center}
-    .hero-visual{height:330px;transform:scale(.65);margin:-45px -110px -75px}.laptop{width:560px}.phone{right:380px;bottom:-10px}
-    section{padding:3.5rem 1.5rem}h2{font-size:2rem;margin-bottom:1.5rem}.portfolio-grid{grid-template-columns:1fr;gap:1rem}.project-card:last-child{grid-column:auto;max-width:none}.project-image{height:220px}.project-info{padding:1.25rem}.project-info > p:not(.project-type){min-height:0;margin-bottom:1rem}
-    .local-business{margin:0 1rem;padding:2rem 1rem}.local-business p{font-size:1.65rem}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}.process-grid{grid-template-columns:1fr;gap:.8rem}
-    #evolution{padding:3.5rem 1.5rem}.evolution-container{gap:1.25rem;margin-top:1.5rem}.evolution-step{padding:1.5rem;border-radius:18px}.evolution-step .step-icon{font-size:2.3rem;margin-bottom:.75rem}.evolution-step h3{font-size:1.45rem;margin-bottom:.6rem}.evolution-step p{margin-bottom:.8rem}.chart{height:55px;margin:.8rem 0}
-    footer{padding:1.5rem}
+    .hero { height:auto;max-height:none;min-height:780px;grid-template-columns:1fr;padding:120px 1.5rem 20px;text-align:center; }
+    .hero-content{align-self:start}.eyebrow{font-size:.64rem}.hero h1{font-size:3.2rem;letter-spacing:-2.5px}.hero-copy{font-size:.95rem;margin-left:auto;margin-right:auto}.hero .cta-buttons{justify-content:center}
+    .hero-visual{height:390px;transform:scale(.72);margin:-35px -90px -30px}.laptop{width:560px}.phone{right:380px;bottom:-10px}
+    section{padding:5rem 1.5rem}h2{margin-bottom:2rem}.portfolio-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto;max-width:none}.project-image{height:270px}
+    .local-business{margin:0 1.5rem;padding:2.5rem 1rem}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:1fr}
 }
 @media (max-width: 430px) {
-    section{padding:3rem 1rem}
-    #contact { padding:3rem 1rem; }
+    #contact { padding-right: 1rem; padding-left: 1rem; }
     .contact-container { padding: 1.25rem; border-radius: 22px; }
-    .hero{padding:92px 1rem 0}.hero h1{font-size:2.4rem;letter-spacing:-1.8px;margin-bottom:1rem}.hero-copy{font-size:.88rem;margin-bottom:1.2rem}.hero .cta-buttons{flex-direction:row;align-items:stretch;gap:.65rem}.hero .btn{width:auto;max-width:180px;flex:1;padding:.85rem .65rem;font-size:.85rem;text-align:center}
-    .hero-visual{height:290px;transform:scale(.5);margin:-75px -150px -90px}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}.service-card{min-height:185px;padding:1rem;gap:.35rem}.service-card h3{font-size:1.02rem}.service-card p{font-size:.82rem;line-height:1.4}.service-card::before{font-size:2.8rem}.project-image{height:195px}.process-card{padding:1.1rem}.process-card h3{margin:.8rem 0 .35rem}
-    .local-business{margin:0 .5rem;padding:1.5rem .75rem}.local-business p{font-size:1.45rem}.location-icon{font-size:2.3rem;margin-bottom:.8rem}.divider{margin-top:1.2rem}
-    #evolution{padding:3rem 1rem}.evolution-step{padding:1.2rem}
+    .hero h1{font-size:2.65rem}.hero .cta-buttons{flex-direction:column;align-items:center}.hero .btn{width:180px;text-align:center}
+    .hero-visual{transform:scale(.58);margin:-65px -135px -70px}.services-grid{grid-template-columns:1fr}.project-image{height:230px}
 }
