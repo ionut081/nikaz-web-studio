@@ -47,31 +47,20 @@ body {
     }
 }
 
-/* Stare initiala ascunsa DOAR pentru cardurile din portofoliu */
+/* Portofoliul este vizibil implicit pentru ca secțiunea să nu dispară */
 .portfolio-grid {
-    opacity: 0;
-    transform: translateY(40px);
+    opacity: 1;
+    transform: translateY(0);
 }
 
+/* Cardurile din portofoliu - ascunse initial, animate la scroll */
 .portfolio-grid .project-card {
     opacity: 0;
     transform: translateY(40px);
 }
 
-/* Hero content este vizibil implicit fara animatie pentru a evita disparitia */
-.hero-content {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Clase aplicate de JS cand elementul ajunge in vizibilitate */
-.portfolio-grid.animated {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.project-card.animated {
+/* Clase aplicate de JS cand cardurile ajung in vizibilitate */
+.portfolio-grid .project-card.animated {
     opacity: 1;
     transform: translateY(0);
     animation: staggerFadeIn 0.6s ease-out forwards;
