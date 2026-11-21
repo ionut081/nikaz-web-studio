@@ -107,10 +107,11 @@ body {
     height: 100vh;
     max-height: 920px;
     display: grid;
-    grid-template-columns: 43% 57%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 88px 4rem 0;
+    padding: 88px 6rem 0;
     box-sizing: border-box;
+    width: 100%;
     background:
         radial-gradient(circle at 77% 44%, rgba(0,119,255,.16), transparent 27%),
         radial-gradient(circle at 40% 100%, rgba(0,212,255,.06), transparent 32%);
@@ -172,12 +173,16 @@ body {
 .trust-item { color: #fff; font-size: 0.9rem; }
 .trust-item strong { display: block; margin-bottom: 0.2rem; }
 .trust-item small { color: #888; }
+.hero-visual {
+    height: 580px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     perspective: 1200px;
     gap: 2rem;
     overflow: hidden;
+    width: 100%;
 }
 .visual-glow { position:absolute; width:540px; height:440px; border-radius:50%; background:rgba(0,119,255,.11); filter:blur(80px); z-index: 1; }
 .laptop { position:absolute; width:680px; height:430px; transform:translate(-22px,-10px) rotateY(-7deg) rotateX(2deg); z-index:2; left: 0; }
