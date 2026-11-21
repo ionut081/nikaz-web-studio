@@ -81,13 +81,24 @@ window.addEventListener('click', (e) => {
 });
 
 /* Parallax effect for hero mockup */
+let ticking = false;
+let mouseX = 0;
+let mouseY = 0;
+
 window.addEventListener('mousemove', (e) => {
-    const { clientX, clientY } = e;
-    const x = (clientX / window.innerWidth - 0.5) * 20;
-    const y = (clientY / window.innerHeight - 0.5) * 20;
+    mouseX = (e.clientX / window.innerWidth - 0.5) * 20;
+    mouseY = (e.clientY / window.innerHeight - 0.5) * 20;
     
-    document.querySelector('.laptop').style.transform = `translate(calc(-22px + ${x}px), calc(-10px + ${y}px)) rotateY(-7deg) rotateX(2deg)`;
-    document.querySelector('.phone').style.transform = `rotate(5deg) translate(${x * 0.5}px, ${y * 0.5}px)`;
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const laptop = document.querySelector('.laptop');
+            const phone = document.querySelector('.phone');
+            if (laptop) laptop.style.transform = `translate(calc(-22px + ${mouseX}px), calc(-10px + ${mouseY}px)) rotateY(-7deg) rotateX(2deg)`;
+            if (phone) phone.style.transform = `rotate(5deg) translate(${mouseX * 0.5}px, ${mouseY * 0.5}px)`;
+            ticking = false;
+        });
+        ticking = true;
+    }
 });
 
 // Efecte pentru butoane
