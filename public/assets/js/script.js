@@ -21,7 +21,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 // Observam toate elementele care trebuie animate
-document.querySelectorAll('.hero-content, .portfolio-grid').forEach(element => {
+document.querySelectorAll('.hero-content, .portfolio-grid, .card, .evolution-step').forEach(element => {
     observer.observe(element);
 });
 
@@ -80,27 +80,14 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Intersection Observer pentru animatii de scroll
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.1
-});
-
-// Observam toate elementele care trebuie animate
-document.querySelectorAll('.hero-content, .portfolio-grid, .card').forEach(element => {
-    observer.observe(element);
-});
-
-// Efecte de parallax pentru elemente din Hero
-const parallaxElements = document.querySelectorAll('.laptop, .phone');
-parallaxElements.forEach((element, index) => {
-    element.style.setProperty('--delay', `${index * 0.5}s`);
+/* Parallax effect for hero mockup */
+window.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e;
+    const x = (clientX / window.innerWidth - 0.5) * 20;
+    const y = (clientY / window.innerHeight - 0.5) * 20;
+    
+    document.querySelector('.laptop').style.transform = `translate(calc(-22px + ${x}px), calc(-10px + ${y}px)) rotateY(-7deg) rotateX(2deg)`;
+    document.querySelector('.phone').style.transform = `rotate(5deg) translate(${x * 0.5}px, ${y * 0.5}px)`;
 });
 
 // Efecte pentru butoane
