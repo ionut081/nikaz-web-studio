@@ -208,9 +208,8 @@ body {
     padding: 88px 6rem 0;
     box-sizing: border-box;
     width: 100%;
-    background:
-        radial-gradient(circle at 77% 44%, rgba(0,119,255,.16), transparent 27%),
-        radial-gradient(circle at 40% 100%, rgba(0,212,255,.06), transparent 32%);
+    /* Eliminat gradientul problematic care genera bara albastră */
+    background: transparent; 
 }
 .hero-content { animation: fadeIn 1s ease-out; position: relative; z-index: 3; }
 .eyebrow { color: var(--accent-cyan); text-transform:uppercase; letter-spacing:.22em; font-size:.72rem; font-weight:700; margin-bottom:1.5rem; }
