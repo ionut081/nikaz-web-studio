@@ -47,7 +47,31 @@ body {
     }
 }
 
-/* Cardurile din portofoliu - vizibile implicit */
+/* CTA Persistent */
+.cta-persistent {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0, 119, 255, 0.3);
+    transition: var(--transition);
+}
+.cta-persistent:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 119, 255, 0.4);
+    background: var(--accent-cyan);
+}
+.cta-persistent .icon { font-size: 1.4rem; }
+
 .portfolio-grid .project-card {
     opacity: 1;
     transform: translateY(0);
