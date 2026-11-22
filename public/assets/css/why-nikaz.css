@@ -1,0 +1,64 @@
+
+/* Why Nikaz Section */
+#why-us {
+    padding: 7rem 4rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.why-us-header { margin-bottom: 4rem; }
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+.why-card {
+    padding: 2.5rem;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    transition: var(--transition);
+    text-align: left;
+}
+.why-card:hover { border-color: var(--accent-blue); transform: translateY(-10px); }
+.why-card h3 { margin: 0 0 1rem; font-size: 1.3rem; color: white; }
+.why-card p { color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; }
+
+.how-we-work {
+    text-align: center;
+    padding: 3rem;
+    background: #0d0d0d;
+    border-radius: 30px;
+}
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 500px;
+    text-align: left;
+}
+.step span {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.step-arrow { color: var(--accent-cyan); font-size: 1.5rem; }
+
+.final-cta { margin-top: 5rem; }
+.final-cta h3 { font-size: 2rem; margin-bottom: 2rem; }
+.final-cta .cta-buttons { justify-content: center; }
