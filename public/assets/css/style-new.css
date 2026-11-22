@@ -72,6 +72,78 @@ body {
 }
 .cta-persistent .icon { font-size: 1.4rem; }
 
+/* Portfolio enhancements */
+.portfolio-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.portfolio-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+    color: white;
+}
+.portfolio-subtitle {
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Demo badge */
+.demo-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-blue);
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Tech badges */
+.tech-badges {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+.tech-badge {
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--accent-cyan);
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Problem/solution/result paragraphs */
+.project-problem, .project-solution, .project-result {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Project actions */
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: white;
+}
+.btn-outline:hover {
+    border-color: var(--accent-blue);
+    background: rgba(0, 119, 255, 0.1);
+}
+
 .portfolio-grid .project-card {
     opacity: 1;
     transform: translateY(0);
