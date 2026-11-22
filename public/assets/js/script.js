@@ -21,7 +21,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 // Observam toate elementele care trebuie animate
-document.querySelectorAll('.hero-content, .portfolio-grid, .card, .evolution-step').forEach(element => {
+document.querySelectorAll('.hero-content, .portfolio-grid, .card, .evolution-step, .about-card').forEach(element => {
     observer.observe(element);
 });
 
