@@ -799,6 +799,10 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     .menu-toggle span{width:15px;height:1px;background:white}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;padding:1.2rem;background:rgba(10,10,12,.96);border:1px solid var(--border-color);border-radius:12px;flex-direction:column;gap:1rem}.nav.active .nav-links{display:flex}
     .hero { height:auto;max-height:none;min-height:780px;grid-template-columns:1fr;padding:120px 1.5rem 20px;text-align:center; }
     .hero-content{align-self:start}.eyebrow{font-size:.64rem}.hero h1{font-size:3.2rem;letter-spacing:-2.5px}.hero-copy{font-size:.95rem;margin-left:auto;margin-right:auto}.hero .cta-buttons{justify-content:center}
+    .about-section { padding: 4rem 1.5rem; }
+    .about-card { padding: 1.5rem; }
+    .final-cta .cta-buttons { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; }
+    .final-cta .btn { width: 100%; max-width: 300px; text-align: center; display: flex; justify-content: center; align-items: center; }
     .hero-visual{height:390px;transform:scale(.72);margin:-35px -90px -30px}.laptop{width:560px}.phone{right:380px;bottom:-10px}
     section{padding:5rem 1.5rem}h2{margin-bottom:2rem}.portfolio-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto;max-width:none}.project-image{height:270px}
     .local-business{margin:0 1.5rem;padding:2.5rem 1rem}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:1fr}
