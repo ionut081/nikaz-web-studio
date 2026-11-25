@@ -827,5 +827,5 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     #contact { padding-right: 1rem; padding-left: 1rem; }
     .contact-container { padding: 1.25rem; border-radius: 22px; }
     .hero h1{font-size:2.65rem}.hero .cta-buttons{flex-direction:column;align-items:center}.hero .btn{width:180px;text-align:center}
-    .hero-visual{transform:scale(.58);margin:-65px -135px -70px}.services-grid{grid-template-columns:1fr}.project-image{height:230px}
+    .hero-visual{transform:scale(.58);margin:-65px -135px -70px}.services-grid{grid-template-columns:1fr}.project-image{height:230px}.project-image img{object-fit:contain}
 }
