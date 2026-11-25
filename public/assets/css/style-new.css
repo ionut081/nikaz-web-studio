@@ -645,7 +645,13 @@ h2 { font-size: clamp(2.2rem,4vw,3.5rem); margin:0 0 3rem; text-align: center; l
     overflow: hidden; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-.project-image img { width: 100%; height: auto; display: block; transition: var(--transition); }
+.project-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    transition: var(--transition); 
+}
 .project-image:hover img { transform: scale(1.03); }
 
 .project-overlay {
