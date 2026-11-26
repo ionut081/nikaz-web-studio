@@ -6,6 +6,23 @@
     margin: auto;
     text-align: center;
 }
+
+.photo-placeholder {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 119, 255, 0.3);
+}
+
+.placeholder-icon {
+    display: block;
+}
 .why-us-header { margin-bottom: 4rem; }
 .why-us-grid {
     display: grid;
