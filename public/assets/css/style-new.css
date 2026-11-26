@@ -600,8 +600,9 @@ h2 { font-size: clamp(2.2rem,4vw,3.5rem); margin:0 0 3rem; text-align: center; l
 .evolution-step.end .bar { background: var(--accent-cyan); }
 
 @media (max-width: 768px) {
-    .evolution-container { flex-direction: column; gap: 2rem; }
-    .evolution-arrow { transform: rotate(90deg); }
+    .cta-persistent {
+        display: none;
+    }
 }
 
 
@@ -651,7 +652,7 @@ h2 { font-size: clamp(2.2rem,4vw,3.5rem); margin:0 0 3rem; text-align: center; l
 .project-image img { 
     width: 100%; 
     height: 100%; 
-    object-fit: cover; 
+    object-fit: contain; 
     display: block; 
     transition: var(--transition); 
 }
@@ -822,7 +823,9 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     .about-card { padding: 1.5rem; }
     .final-cta .cta-buttons { display: flex; flex-direction: column; align-items: center; gap: 1rem; width: 100%; }
     .final-cta .btn { width: 100%; max-width: 300px; text-align: center; display: flex; justify-content: center; align-items: center; }
-    .hero-visual{height:390px;transform:scale(.72);margin:-35px -90px -30px}.laptop{width:560px}.phone{right:380px;bottom:-10px}
+    .hero-visual {
+        display: none;
+    }
     section{padding:5rem 1.5rem}h2{margin-bottom:2rem}.portfolio-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto;max-width:none}.project-image{height:270px}
     .local-business{margin:0 1.5rem;padding:2.5rem 1rem}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.process-grid{grid-template-columns:1fr}
 }
@@ -830,5 +833,5 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     #contact { padding-right: 1rem; padding-left: 1rem; }
     .contact-container { padding: 1.25rem; border-radius: 22px; }
     .hero h1{font-size:2.65rem}.hero .cta-buttons{flex-direction:column;align-items:center}.hero .btn{width:180px;text-align:center}
-    .hero-visual{transform:scale(.58);margin:-65px -135px -70px}.services-grid{grid-template-columns:1fr}.project-image{height:230px}.project-image img{object-fit:contain}
+    .hero-visual{display:none;}.services-grid{grid-template-columns:1fr}.project-image{height:230px}.project-image img{object-fit:contain}
 }
