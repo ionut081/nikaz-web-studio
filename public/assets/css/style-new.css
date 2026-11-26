@@ -447,15 +447,16 @@ body {
     width: 100%;
     max-width: 780px;
     height: auto;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    transition: var(--transition);
     position: relative;
     z-index: 2;
+    transition: var(--transition);
+    display: block;
+    margin: 0 auto;
+    background: transparent !important;
 }
 
 .hero-main-img:hover {
     transform: scale(1.01);
-    box-shadow: 0 40px 80px rgba(0,119,255,0.2);
 }
 
 @media (max-width: 768px) {
