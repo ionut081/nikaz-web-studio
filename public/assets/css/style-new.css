@@ -1,5 +1,21 @@
 /* Premium Dark Agency Design for Nikaz Web Studio */
 
+/* Adaugă animații de intrare subtile */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-animate {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 :root {
     --bg-color: #050505;
     --surface-color: #0d0d0d;

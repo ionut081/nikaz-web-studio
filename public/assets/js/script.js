@@ -8,11 +8,11 @@ if (menuToggle && nav) {
     });
 }
 
-// Intersection Observer pentru animatii de scroll
+// Observam toate elementele care trebuie animate pentru scroll-reveal
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('animated');
+            entry.target.classList.add('visible');
             observer.unobserve(entry.target);
         }
     });
@@ -20,8 +20,9 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.1
 });
 
-// Observam toate elementele care trebuie animate
-document.querySelectorAll('.hero-content, .portfolio-grid, .card, .evolution-step, .about-card').forEach(element => {
+// Adaugam clasa scroll-animate elementelor vizate
+document.querySelectorAll('.project-card, .why-card, .service-card, .evolution-step').forEach(element => {
+    element.classList.add('scroll-animate');
     observer.observe(element);
 });
 
