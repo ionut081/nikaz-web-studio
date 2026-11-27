@@ -35,8 +35,9 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-        overflow-x: auto;
-        min-width: 1200px;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
 }
 
 /* Animations */
@@ -323,6 +324,7 @@ body {
     width: calc(100% - 8rem);
     height: 88px;
     margin: 0 4rem;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -352,6 +354,12 @@ body {
         radial-gradient(circle at 40% 100%, rgba(0,212,255,.06), transparent 32%);
 }
 .hero-content { animation: fadeIn 1s ease-out; position: relative; z-index: 3; }
+.hero-content,
+.hero-visual,
+.project-card,
+.project-info {
+    min-width: 0;
+}
 .eyebrow { color: var(--accent-cyan); text-transform:uppercase; letter-spacing:.22em; font-size:.72rem; font-weight:700; margin-bottom:1.5rem; }
 .hero h1 { font-size: clamp(3.4rem, 5vw, 5.7rem); line-height:.98; margin: 0 0 1.7rem; letter-spacing: -4px; }
 .hero h1 span { color: #aab0c5; font-weight: bold; text-transform: uppercase; letter-spacing: 0.1em; }
@@ -369,6 +377,7 @@ body {
 .btn {
     padding: 1rem 2rem;
     border-radius: 50px;
+    box-sizing: border-box;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -431,6 +440,7 @@ body {
     width: 100%;
     /* Dă mai mult spațiu imaginii pe desktop */
     grid-column: 2 / 3;
+    overflow: clip;
 }
 
 .visual-glow { 
@@ -438,7 +448,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 540px; 
+    width: min(540px, 100%);
     height: 440px; 
     border-radius: 50%; 
     background: rgba(0, 119, 255, 0.15); 
@@ -627,6 +637,28 @@ h2 { font-size: clamp(2.2rem,4vw,3.5rem); margin:0 0 3rem; text-align: center; l
     .cta-persistent {
         display: none;
     }
+
+    #evolution {
+        padding: 4rem 1.5rem;
+    }
+
+    .evolution-container {
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .evolution-step {
+        box-sizing: border-box;
+        flex: 0 1 auto;
+        width: 100%;
+    }
+
+    .evolution-arrow {
+        transform: rotate(90deg);
+        animation: none;
+    }
 }
 
 
@@ -795,8 +827,8 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     content: "";
     position: absolute;
     top: -50%;
-    right: -50%;
-    width: 100%;
+    right: 0;
+    width: 50%;
     height: 200%;
     background: radial-gradient(circle, rgba(0, 119, 255, 0.05), transparent 70%);
     z-index: 0;
@@ -1168,7 +1200,7 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     flex-direction: column !important;
     }
     .hero .btn {
-    width: 180px !important;
+    width: min(100%, 244px) !important;
     text-align: center !important;
     }
     .hero-visual {
@@ -1212,26 +1244,6 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     .project-image img {
     object-fit: contain !important;
     }
-}
 
-/* Force PC/desktop layout at all viewport sizes — suprascrie orice media query mobil */
-@media screen {
-    .hero {
-        grid-template-columns: 45% 55% !important;
-        padding: 88px 6rem 0 !important;
-        text-align: left !important;
-    }
-    .hero-visual {
-        display: block !important;
-    }
-    .menu-toggle {
-        display: none !important;
-    }
-    .nav-links {
-        display: flex !important;
-    }
-    .portfolio-grid, .services-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    }
 }
 
