@@ -35,8 +35,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    overflow-x: auto;
-    min-width: 1200px;
+        overflow-x: auto;
+        min-width: 1200px;
 }
 
 /* Animations */
@@ -1214,14 +1214,7 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     }
 }
 
-/* Navigare mobil deschisă — prevenire scroll body */
-.nav.active {
-    overflow-y: auto !important;
-    max-height: 70vh !important;
-}
-
-
-/* Force PC/desktop layout at all viewport sizes */
+/* Force PC/desktop layout at all viewport sizes — suprascrie orice media query mobil */
 @media screen {
     .hero {
         grid-template-columns: 45% 55% !important;
@@ -1242,23 +1235,3 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
     }
 }
 
-/* Force PC/desktop layout at all viewport sizes */
-@media screen {
-    .hero {
-        grid-template-columns: 45% 55% !important;
-        padding: 88px 6rem 0 !important;
-        text-align: left !important;
-    }
-    .hero-visual {
-        display: block !important;
-    }
-    .menu-toggle {
-        display: none !important;
-    }
-    .nav-links {
-        display: flex !important;
-    }
-    .portfolio-grid, .services-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    }
-}
