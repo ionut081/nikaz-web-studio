@@ -1241,3 +1241,24 @@ footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border-c
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     }
 }
+
+/* Force PC/desktop layout at all viewport sizes */
+@media screen {
+    .hero {
+        grid-template-columns: 45% 55% !important;
+        padding: 88px 6rem 0 !important;
+        text-align: left !important;
+    }
+    .hero-visual {
+        display: block !important;
+    }
+    .menu-toggle {
+        display: none !important;
+    }
+    .nav-links {
+        display: flex !important;
+    }
+    .portfolio-grid, .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
